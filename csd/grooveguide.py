@@ -1,19 +1,10 @@
-
 from flask import Flask, render_template, request, redirect
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
-
-
 grooveguide = Flask(__name__)
-
-
 SPOTIPY_CLIENT_ID = 'your_client_id'
 SPOTIPY_CLIENT_SECRET = 'your_client_secret'
-
-
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET))
-
-
 mood_playlists = {
     "happy": "hhttps://open.spotify.com/search/happy/playlists",
     "sad": "https://open.spotify.com/search/sad/playlists",
@@ -60,7 +51,3 @@ def redirect_to_spotify(mood):
 
 if __name__ == "__main__":
     grooveguide.run(debug=True)
-
-
-
-
