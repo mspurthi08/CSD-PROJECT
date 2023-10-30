@@ -12,4 +12,19 @@ ABOUT THE PROJECT
 
 Our project was developed to improve how people find and use music. The idea behind the project is that music has the ability to significantly affect feelings. Users of Groove Guide can enter feelings or moods they're experiencing, such as happy, sad, angry, relaxed, etc. The vast music library of Spotify is then accessed by it to offer customized song and playlist recommendations. Users can enjoy music that elevates their present emotional state by selecting a song that is suggested to them based on how they are feeling.
 
+OBJECTIVES
+
+The following are the main goals of the Groove Guide:
+
+Effective Song Selection: 
+With Groove Guide, customers will have an easy-to-use and effective way to find music that fits their mood or emotional situation at that moment. It should be simple and quick for users to select the appropriate song.
+
+Personalization:  
+By taking into account the user's indicated mood or emotion, the program aims to provide personalized music recommendations. It guarantees that listeners find music that actually expresses how they're feeling.
+
+Enhanced Music Exploration: 
+By providing users with specially selected playlists that correspond with their emotions, the initiative hopes to improve users' musical discovery. Users can find new songs and artists to enjoy and expand their musical horizons.
+
+User-Friendly Interface: 
+Groove Guide's design ensures a smooth user experience by being both aesthetically pleasing and intuitive. The application is user-friendly and makes finding music recommendations fast and easy. 
 
