@@ -1,19 +1,15 @@
-# Import necessary libraries
 from flask import Flask, render_template, request, redirect
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-# Initialize your Flask app
 grooveguide = Flask(__name__)
 
-# Spotify API credentials
+
 SPOTIPY_CLIENT_ID = 'your_client_id'
 SPOTIPY_CLIENT_SECRET = 'your_client_secret'
 
-# Initialize Spotify client
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET))
 
-# Define Spotify playlist URIs for different moods
 mood_playlists = {
     "happy": "https://open.spotify.com/playlist/37i9dQZF1EVJSvZp5AOML2",
     "sad": "https://open.spotify.com/playlist/37i9dQZF1DWSqBruwoIXkA",
@@ -46,7 +42,6 @@ def index():
         if user_input in mood_playlists:
             mood = user_input
 
-            # Redirect to the Spotify playlist page for the selected mood
             return redirect(f"/mood/{mood}")
 
     return render_template("index.html", song=song)
