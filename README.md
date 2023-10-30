@@ -11,3 +11,5 @@ Music has become a vital aspect of our lives in the digital age. It can provoke 
 ABOUT THE PROJECT 
 
 Our project was developed to improve how people find and use music. The idea behind the project is that music has the ability to significantly affect feelings. Users of Groove Guide can enter feelings or moods they're experiencing, such as happy, sad, angry, relaxed, etc. The vast music library of Spotify is then accessed by it to offer customized song and playlist recommendations. Users can enjoy music that elevates their present emotional state by selecting a song that is suggested to them based on how they are feeling.
+
+
