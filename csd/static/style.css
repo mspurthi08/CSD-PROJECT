@@ -1,7 +1,5 @@
-/* Add this to your style.css */
-
 .full-page {
-    background-color: #c6e2ff; /* Light blue background color */
+    background-color: #c6e2ff; 
     font-family: Times New Roman, Baskerville;
     text-align: center;
     padding: 0;
@@ -14,16 +12,16 @@
 
 .white-box {
     background-color: #fff;
-    width: 500px; /* Set the desired width for the square */
-    height: 500px; /* Set the desired height for the square */
+    width: 500px; 
+    height: 500px; 
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .logo img {
-    width: 150px; /* Adjust the width as needed */
-    height: 150px; /* Adjust the height as needed */
+    width: 150px; 
+    height: 150px; 
     margin-top: 20px;
 }
 
