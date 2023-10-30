@@ -1,6 +1,8 @@
+
 from flask import Flask, render_template, request, redirect
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+
 
 grooveguide = Flask(__name__)
 
@@ -8,29 +10,31 @@ grooveguide = Flask(__name__)
 SPOTIPY_CLIENT_ID = 'your_client_id'
 SPOTIPY_CLIENT_SECRET = 'your_client_secret'
 
+
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET))
 
+
 mood_playlists = {
-    "happy": "https://open.spotify.com/playlist/37i9dQZF1EVJSvZp5AOML2",
-    "sad": "https://open.spotify.com/playlist/37i9dQZF1DWSqBruwoIXkA",
-    "angry": "https://open.spotify.com/playlist/37i9dQZF1EIgNZCaOGb0Mi",
-    "relaxed": "https://open.spotify.com/playlist/75nyJIOPfJEAzQIG8XMDFM",
-    "soft": "https://open.spotify.com/playlist/37i9dQZF1EIcNUtFW3CJZc?si=61970b0aec444a4f",
-    "romance": "https://open.spotify.com/playlist/37i9dQZF1EIh7dFzbJpr7C?si=34bacda71f7f4d03",
-    "workout": "https://open.spotify.com/playlist/37i9dQZF1EIdHZWT31d1QN?si=5f8e2cd355d14566",
-    "emotional": "https://open.spotify.com/playlist/37i9dQZF1EIerV7MkE62Mz?si=94ee1096d01946fc",
-    "rainy":  "https://open.spotify.com/playlist/37i9dQZF1EIfilQIuOCwD7?si=706ba3f9431f4622",
-    "nostalgia": "https://open.spotify.com/playlist/37i9dQZF1EIhj2zUFUJqG1?si=8ac8bbdf545740cf",
-    "driving": "https://open.spotify.com/playlist/37i9dQZF1EIeEGqN5vooFV?si=afa37ddb907744ba",
-    "breakup": "https://open.spotify.com/playlist/37i9dQZF1EIhrKu07W6FWB?si=f8427ea25c684aa4",
-    "shower": "https://open.spotify.com/playlist/37i9dQZF1EIfkE4mG1NtgG?si=5b922427c7c14f91",
-    "crying": "https://open.spotify.com/playlist/37i9dQZF1EIctw4dMbBUt1?si=f807542221e6457b",
-    "bollywood": "https://open.spotify.com/playlist/37i9dQZF1EIcMWU5aFysN5?si=c1776d47100e4f50",
-    "dance": "https://open.spotify.com/playlist/37i9dQZF1EIdt7tQbR8QDN?si=c62c14b206a54f9f",
-    "party": "https://open.spotify.com/playlist/37i9dQZF1EIdzRg9sDFEY3?si=9570f82351b440dd",
-    "lonely": "https://open.spotify.com/playlist/37i9dQZF1EIhrfJdOCmxe4?si=68f83149f499436c",
-    "rage": "https://open.spotify.com/playlist/37i9dQZF1EIhuCNl2WSFYd?si=afdca81fc2294da2",
-    "fun": "https://open.spotify.com/playlist/37i9dQZF1EIhNeYdg47zFW?si=1a965cd4db5a4cf8",
+    "happy": "hhttps://open.spotify.com/search/happy/playlists",
+    "sad": "https://open.spotify.com/search/sad/playlists",
+    "angry": "https://open.spotify.com/search/angry/playlists",
+    "relaxed": "https://open.spotify.com/search/relaxed/playlists",
+    "soft": "https://open.spotify.com/search/soft/playlists",
+    "romance": "https://open.spotify.com/search/romance/playlists",
+    "workout": "https://open.spotify.com/search/workout/playlists",
+    "emotional": "https://open.spotify.com/search/emotional/playlists",
+    "rainy":  "https://open.spotify.com/search/rainy/playlists",
+    "nostalgia": "https://open.spotify.com/search/nostalgia/playlists",
+    "driving": "https://open.spotify.com/search/driving/playlists",
+    "breakup": "https://open.spotify.com/search/breakup/playlists",
+    "shower": "https://open.spotify.com/search/shower/playlists",
+    "crying": "https://open.spotify.com/search/crying/playlists",
+    "bollywood": "https://open.spotify.com/search/bollywood/playlists",
+    "dance": "https://open.spotify.com/search/dance/playlists",
+    "party": "https://open.spotify.com/search/party/playlists",
+    "lonely": "https://open.spotify.com/search/lonely/playlists",
+    "rage": "https://open.spotify.com/search/rage/playlists",
+    "fun": "https://open.spotify.com/search/fun/playlists",
 }
 
 @grooveguide.route("/", methods=["GET", "POST"])
@@ -40,8 +44,7 @@ def index():
     if request.method == "POST":
         user_input = request.form["user_input"].lower()
         if user_input in mood_playlists:
-            mood = user_input
-
+            mood = user_input            
             return redirect(f"/mood/{mood}")
 
     return render_template("index.html", song=song)
@@ -57,3 +60,7 @@ def redirect_to_spotify(mood):
 
 if __name__ == "__main__":
     grooveguide.run(debug=True)
+
+
+
+
