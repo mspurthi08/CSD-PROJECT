@@ -51,3 +51,4 @@ def redirect_to_spotify(mood):
 
 if __name__ == "__main__":
     grooveguide.run(debug=True)
+    print("Happy listening")
