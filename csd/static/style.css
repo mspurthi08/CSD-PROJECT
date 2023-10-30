@@ -33,7 +33,6 @@ h1, h4 {
     border: 2px solid #007BFF;
     border-radius: 5px;
 }
-
 .form-control:focus {
     border-color: #0056b3;
 }
